@@ -6,7 +6,7 @@
 - update the README file with TODO list
 - clone the repo omn your PC : ```git clone repo_ssh```
 - create a new branch : ```git checkout -b branch_name```
-- create a fail.sh script that returns "1" : ```vi test.sh```
+- create a fail.sh script that returns "1" : ```vi fail.sh```
 ```
 #!/usr/bin/env bash
 exit 1
@@ -37,12 +37,12 @@ script:
 - get into the cloned repo
 - change to master branch and pull to get its lastest update : ```git checkout master``` , ```git pull origin master```
 - create a new branch for the testing purpose : ```git checkout -b "branch_name"```
-- add fail_test.sh that test the output from test.sh and put fail_test.sh into travis file : 
+- add test.sh that test the output from fail.sh and put test.sh into travis file : 
 ```vi fail_test.sh```
 
 ```
 #!/usr/bin/env bash
-bash test.sh
+bash fail.sh
 if [ $? -eq 1 ]; then
 
    echo "test is good";
@@ -57,7 +57,7 @@ language: generic
 dist: xenial
 sudo: required
 script:
-- bash fail_test.sh
+- bash test.sh
 ```
 - check the newly updated and created files and add them : ```git status``` , ```git add .```
 - commit the changes : ```git commit -m "commit_title"```
@@ -75,15 +75,15 @@ language: generic
 dist: xenial
 sudo: required
 script:
-- bash fail_test.sh
+- bash test.sh
 deploy:
   provider: releases
   api_key:
     secure: Ec49fYBcI32RU4imsmnLLO2Yw72S3WgTKWhQYTOzAsURuxwabj8glISXUwzPGtFByHT7HOzkkKjQ4F4PekTng1mdu4fRm3XgF1Wiu8ZMPrNSFv9lTlTFj3RRnRCi+CwnX4lDLNXBReisoVvpobjCsAMpD7WL/lHzP/BgkcPDkWUZD8RcoUbsSHqNeN5BOPiZfODCKYNNX9P4gmDmR5znoc/a7+1QIxarw5R4349O1aLpBQdCHbbgPtR2CAy6woSaQwTEuPn+oeRLg1n8jjW+U32nooBYX66xfMO4Ofwe70RDPXLYhBnrZIkNSQcJl5zvNOglyCdMJXNZE7xIB3dIpjmNp8TVcTubT77A7XWhIikPymCX42zv8RBa7/f3yt9PntlsGqFcWA6m1VMCrdSpLfO9Y+W+vmFQRQMMjKEB1iSb+SAFvjgYmqMUFeuGoJXL73fxn+cAmJgsV+y1buWrCW4en6bjfPmWR1MNTTttOlf0mK6UAdQJ4uFwGs3GdZw6KvRQWvxD4TcPr+8Y8H2O9lr+Bk/nMgZQM2gvjgxq9OIWUc79Tt0+cmOPhUlCElGm4egvRI1liyNj2Nm4cNZ9IIdplE/0IWP5+bubqx+UZp/s0Cv/7L10yI+8fdqJDtZsySU18l7aCmBvNs8JBGvrIGPgr7shplyvIkXCCMKCdd8=
-  file: test.sh
+  file: fail.sh
   on:
     repo: galindonkov/fail.sh
-    branch: release_adding
+    tags: true
 ```
 - add the updated travis file : ```git status``` , ```git add .```
 - commit the cnages : ```git commit -m "commit_title"```
