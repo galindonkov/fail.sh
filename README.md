@@ -10,7 +10,7 @@
 - File ```.travis.yml``` : a Continues Intergation added for testing purpose
 
 **TODO list**
-- Create a repo with fail.sh program in it that prints fails
-- Add the repo to travis with test that always pass
-- Create a ```test.sh``` program that tests the output from ```fail.sh``` and put it into the travis file.
-- Create a new release
+- [ ] Create a repo with fail.sh program in it that prints fails
+- [ ] Add the repo to travis with test that always pass
+- [ ] Create a ```test.sh``` program that tests the output from ```fail.sh``` and put it into the travis file.
+- [ ] Create a new release
