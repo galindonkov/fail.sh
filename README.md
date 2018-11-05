@@ -1,7 +1,8 @@
 # fail.sh
 The task is to create a repo with a test, travis test, release and proper readme file and detailed instructions for a script that always fails:
 
-#TO DO
+## TODO
+
 1.Create a repo with fail.sh script
 - create a repo with name fail.sh with README file and MIT license
 - add DETAILED.MD file with instructions on every step
