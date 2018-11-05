@@ -1,6 +1,6 @@
+## DONE
 
-
-1.**Create a repo with fail.sh script**
+### Create a repo with fail.sh script
 - Connect to your profile in GITHUB and create a repo with name fail.sh with README file and MIT license
 - add DETAILED.MD file with instructions on every step
 - update the README file with TODO list
@@ -16,7 +16,7 @@ exit 1
 - push the changes : ```git push origin branch_name```
 - PR and Merge from the GITHUB
 
-2.**Add the repo to travis with a test**
+### Add the repo to travis with a test
 - go into the travis site and enable repo "fail.sh"
 - Get into the cloned repo 
 - Pull the master branch to get its latest update : ```git checkout master``` , ```git pull origin master```
@@ -33,7 +33,7 @@ script:
 - create a push request : ```git push origin "current_branch_name"```
 - create a PR and Merge it from GITHUB
 
-3.**Create test.sh that tests the output from fail.sh**
+### Create test.sh that tests the output from fail.sh
 - get into the cloned repo
 - change to master branch and pull to get its lastest update : ```git checkout master``` , ```git pull origin master```
 - create a new branch for the testing purpose : ```git checkout -b "branch_name"```
@@ -64,7 +64,7 @@ script:
 - create a push request : ```git push origin "current_branch_name"```
 - Create PR and Merge it from GITHUB
 
-4.**Create a release**
+### Create a release
 - get into the cloned repo
 - pull the master the get its latest status : ```git checkout master``` , ```git pull origin master```
 - create a new branch for release adding purpose : ```git checkout -b "branch_name"```
@@ -90,17 +90,3 @@ deploy:
 - create push request : ```git push origin "current_branch"```
 - create PR and Merge it
 - In order to create a new release go into the GITHUB -> RELEASES and create a pre-release that is not ready for PROD YET
-
-
-
-
-
-
-
-
-
-
-
-
-
-
