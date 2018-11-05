@@ -3,7 +3,7 @@
 1.**Create a repo with fail.sh script**
 - Connect to your profile in GITHUB and create a repo with name fail.sh with README file and MIT license
 - add DETAILED.MD file with instructions on every step
-- update the README file TODO list
+- update the README file with TODO list
 - clone the repo omn your PC : ```git clone repo_ssh```
 - create a new branch : ```git checkout -b branch_name```
 - create a fail.sh script that returns "1" : ```vi test.sh```
@@ -64,6 +64,32 @@ script:
 - create a push request : ```git push origin "current_branch_name"```
 - Create PR and Merge it from GITHUB
 
+4.**Create a release**
+- get into the cloned repo
+- pull the master the get its latest status : ```git checkout master``` , ```git pull origin master```
+- create a new branch for release adding purpose : ```git checkout -b "branch_name"```
+- update the .travis.yml file with release requirement information by using "travis cli"
+```travis setup releases``` and follow the steps and the .travis.yml should look like:
+```
+language: generic
+dist: xenial
+sudo: required
+script:
+- bash fail_test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: Ec49fYBcI32RU4imsmnLLO2Yw72S3WgTKWhQYTOzAsURuxwabj8glISXUwzPGtFByHT7HOzkkKjQ4F4PekTng1mdu4fRm3XgF1Wiu8ZMPrNSFv9lTlTFj3RRnRCi+CwnX4lDLNXBReisoVvpobjCsAMpD7WL/lHzP/BgkcPDkWUZD8RcoUbsSHqNeN5BOPiZfODCKYNNX9P4gmDmR5znoc/a7+1QIxarw5R4349O1aLpBQdCHbbgPtR2CAy6woSaQwTEuPn+oeRLg1n8jjW+U32nooBYX66xfMO4Ofwe70RDPXLYhBnrZIkNSQcJl5zvNOglyCdMJXNZE7xIB3dIpjmNp8TVcTubT77A7XWhIikPymCX42zv8RBa7/f3yt9PntlsGqFcWA6m1VMCrdSpLfO9Y+W+vmFQRQMMjKEB1iSb+SAFvjgYmqMUFeuGoJXL73fxn+cAmJgsV+y1buWrCW4en6bjfPmWR1MNTTttOlf0mK6UAdQJ4uFwGs3GdZw6KvRQWvxD4TcPr+8Y8H2O9lr+Bk/nMgZQM2gvjgxq9OIWUc79Tt0+cmOPhUlCElGm4egvRI1liyNj2Nm4cNZ9IIdplE/0IWP5+bubqx+UZp/s0Cv/7L10yI+8fdqJDtZsySU18l7aCmBvNs8JBGvrIGPgr7shplyvIkXCCMKCdd8=
+  file: test.sh
+  on:
+    repo: galindonkov/fail.sh
+    branch: release_adding
+```
+- add the updated travis file : ```git status``` , ```git add .```
+- commit the cnages : ```git commit -m "commit_title"```
+- create push request : ```git push origin "current_branch"```
+- create PR and Merge it
+- In order to create a new release go into the GITHUB -> RELEASES and create a pre-release that is not ready for PROD YET
 
 
 
