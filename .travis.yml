@@ -2,7 +2,7 @@ language: generic
 dist: xenial
 sudo: required
 script:
-- bash fail_test.sh
+- bash test.sh
 deploy:
   provider: releases
   api_key:
