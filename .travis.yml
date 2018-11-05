@@ -2,4 +2,4 @@ language: generic
 dist: xenial
 sudo: required
 script:
-- echo 0
+- bash fail_test.sh
