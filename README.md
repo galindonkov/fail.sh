@@ -16,7 +16,7 @@ Vagrant
 - File ```fail_test.sh``` : a script that check the exit code from program test.sh and prints either good or bad testing output 
 - File ```.travis.yml``` : a Continues Intergation added for testing purpose
 - File ```Vagrantfile``` : Has the configuration for vagrant, about what type of VM we want, once set, executing vagrant up will have our clean environment
-- A file ```travis_install.sh``` under directory ```scripts``` : A provision script that will install required ```travis-cli``` on the VM created by ```vagrant up``` command
+
 
 **Manual instructions how to test ```fail.sh``` program**
 
