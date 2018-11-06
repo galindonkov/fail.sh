@@ -100,5 +100,4 @@ deploy:
 - commit the changes : ```git commit -m commit_title```
 - create push request : ```git push origin current_branch```
 - create PR and Merge it
-- In order to create a new release go into the repo/release tab ```https://github.com/galindonkov/hello_app_ps3/releases``` , create a new release ```Create a new release```, choose a version, make sure the following is checked 
-     ```[ ]This is a pre-release```  and then ```Publish release```. After several minutes the file choosen and added into the ```.travis.yml``` file has to be uploaded, which means the process works.
+- In order to create a new release go into the repo/release tab ```https://github.com/galindonkov/hello_app_ps3/releases``` , create a new release ```Create a new release```, choose a version, make sure the following is checked  - ```[ ]This is a pre-release```  and then ```Publish release```. After several minutes the file choosen and added into the ```.travis.yml``` file has to be uploaded, a new tag will be created and we will got some assets.
