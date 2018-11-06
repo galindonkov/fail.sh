@@ -70,6 +70,10 @@ script:
 - create PR and Merge it from GITHUB
 
 ### Prepare a travis release
+##Prerequisit: "travis cli must be installed" by ```gem install travis``` , in case of issues check following link : 
+[link](https://blog.travis-ci.com/2013-01-14-new-client)
+
+Once you get ```travis cli installed```, proceed with below steps: 
 - get into the cloned repo
 - change to master branch : ```git checkout master```
 - pull the master the get its latest status :  ```git pull origin master```
