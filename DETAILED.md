@@ -1,6 +1,6 @@
-## DONE
+# DONE
 
-### Create a repo with fail.sh script
+## Create a repo with fail.sh script
 - Connect to your profile in GITHUB and create a repo with name fail.sh with README file and MIT license
 - add DETAILED.MD file with instructions on every step
 - update the README file with TODO list
@@ -36,7 +36,7 @@ script:
 - create a push request : ```git push origin current_branch_name```
 - create a PR and Merge it from GITHUB
 
-### Create test.sh that tests the output from fail.sh
+## Create test.sh that tests the output from fail.sh
 - get into the cloned repo
 - change to master branch : ```git checkout master```
 - pull the master branch to get its latest update : ```git pull origin master```
@@ -69,8 +69,9 @@ script:
 - create a push request : ```git push origin current_branch_name```
 - create PR and Merge it from GITHUB
 
-### Prepare a travis release
-##Prerequisit: "travis cli must be installed" by ```gem install travis``` , in case of issues check following link : 
+## Prepare a travis release
+
+### Prerequisit: "travis cli must be installed" by ```gem install travis``` , in case of issues check following link : 
 [link](https://blog.travis-ci.com/2013-01-14-new-client)
 
 Once you get ```travis cli installed```, proceed with below steps: 
